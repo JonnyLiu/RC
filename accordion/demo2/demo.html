@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <title>云雨科技后台管理系统</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,9 +11,18 @@
     <link href="../skins/default/accordion-menu.css" rel="stylesheet" />
     <script src="accordion-menu.js"></script>
     <link rel="icon" href="http://120.77.205.32/wp-content/uploads/2018/04/cropped-site-logo-2-32x32.png" sizes="32x32" />
-    <style>#accordion { box-shadow:none; } p{margin:30px 0;}</style>
+    <style>
+        #accordion {
+            box-shadow: none;
+        }
+        
+        p {
+            margin: 30px 0;
+        }
+    </style>
 </head>
-<body>
+
+<body id="back">
     <header>
         <span data-panel="panel1" class="panel-button"></span>
         <a class="logo" href="http://120.77.205.32" target="_blank">雨云科技</a>
@@ -58,7 +68,7 @@
         <p>RCDisk主要面向企业用户，属于企业级私有云盘，较传统互联网公有云盘更安全、可靠，并可实现企业级、项目级、用户级的多层次数据协同。RCDisk可独立使用，亦可配合云桌面使用，精细化读写、分发与共享权限控制，确保云盘数据不经管理员许可不能外泄，保证了用户核心数据的安全性。RCDisk同时提供了自动增量备份功能，用户每次保存文档都自动备份一个文件副本，用户可以随时找回任意历史时间点的数据，预防数据丢失与病毒破坏。</p>
         <h2>云应用</h2>
         <p>RCApp是云桌面的一个完美补充，当用户没有云桌面环境，又不能在PC上安装软件的时候（如：软件安装复杂、硬件要求太高、软件授权问题、客户使用等），通过RCApp可实现软件使用的需求。云应用顾名思义，是指应用安装于云端服务器，使用服务器资源，用户通过浏览器直接在本地加载应用，同时可访问云端数据和本地数据，与在本地PC安装软件后再使用的效果完全一样，性能甚至比本地PC更高。随着云时代的到来，用户已逐渐习惯云应用这种轻量化的软件使用方式，亦能实现软件资源的共享。</p>
-    
+
     </div>
     <div id="panel1">
         <div style="text-align:center;margin:26px 0;">
@@ -114,12 +124,13 @@
     </div>
 </body>
 <script>
-    $(function(){
+    $(function() {
         //顶部样式切换 
-        $("#top-nav").find("a").on('click',function (e) {
+        $("#top-nav").find("a").on('click', function(e) {
             $(this).addClass("active");
             $(this).siblings().removeClass("active");
-        })
+        });
     })
 </script>
+
 </html>

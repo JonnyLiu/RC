@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../../jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../jquery-ui-1.12.1.custom/jquery-ui.css">
+    <title>反馈信息</title>
+    <script type="text/javascript">
+        $(document).ready(function(e) {
+            $("#reviews").bind('click', function(event) {
+                $("#checkandPass").dialog({
+                    autoOpen: true,
+                    width: 765,
+                    show: "blind",
+                    hide: "explode",
+                    modal: true, //设置背景灰的 
+                });
+                $("#checkandPass").dialog("open");
+                return true;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <input type="button" id="reviews" value="反馈" />
+    </div>
+    <div id="checkandPass" title="反馈信息" style="display: none;">
+        <form id="passideas_true" method="post" enctype="multipart/form-data">
+            <div>
+                <textarea style="width:100%;height:90%;min-height: 100px;"></textarea>
+            </div>
+            <div style="margin-top: 20px;text-align: center;">
+                <button style="height:30px;width:80px;" type="button" id="upfpass_true">确定</button>
+                <button style="height:30px;width:80px;" id="sb">取消</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html
