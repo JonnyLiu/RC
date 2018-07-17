@@ -11,6 +11,8 @@
     <link href="../skins/default/accordion-menu.css" rel="stylesheet" />
     <script src="accordion-menu.js"></script>
     <link rel="icon" href="http://120.77.205.32/wp-content/uploads/2018/04/cropped-site-logo-2-32x32.png" sizes="32x32" />
+    <link rel="stylesheet" href="../../jquery-ui-1.12.1.custom/jquery-ui.css">
+    <script src="../../jquery-ui-1.12.1.custom/jquery-ui.js"></script>
     <style>
         #accordion {
             box-shadow: none;
@@ -20,19 +22,66 @@
             margin: 30px 0;
         }
     </style>
+    <script type="text/javascript">
+        $(document).ready(function(e) {
+            $("#reviews").bind('click', function(event) {
+                $("#checkandPass").dialog({
+                    autoOpen: true,
+                    width: 765,
+                    show: "blind",
+                    hide: "explode",
+                    modal: true, //设置背景灰的 
+                });
+                $("#checkandPass").dialog("open");
+                return true;
+            });
+            $("#reviews1").bind('click', function(event) {
+                $("#checkandPass1").dialog({
+                    autoOpen: true,
+                    width: 765,
+                    show: "blind",
+                    hide: "explode",
+                    modal: true, //设置背景灰的 
+                });
+                $("#checkandPass1").dialog("open");
+                return true;
+            });
+        });
+    </script>
 </head>
 
-<body id="back">
+<body>
+    <!-- 反馈信息弹出框 -->
+    <div id="checkandPass" title="反馈信息" style="display: none;">
+        <form id="passideas_true" method="post" enctype="multipart/form-data">
+            <div>
+                <textarea style="width:100%;height:90%;min-height: 100px;"></textarea>
+            </div>
+            <div style="margin-top: 20px;text-align: center;">
+                <button style="height:30px;width:80px;" type="button" id="upfpass_true">确定</button>
+                <button style="height:30px;width:80px;" id="sb">取消</button>
+            </div>
+        </form>
+    </div>
+    <!-- 退出信息弹出框 -->
+    <div id="checkandPass1" title="是否确定退出" style="display: none;">
+        <form id="passideas_true" method="post" enctype="multipart/form-data">
+            <div style="margin-top: 20px;text-align: center;">
+                <button style="height:30px;width:80px;" type="button" id="upfpass_true">确定</button>
+                <button style="height:30px;width:80px;" id="sb">取消</button>
+            </div>
+        </form>
+    </div>
     <header>
         <span data-panel="panel1" class="panel-button"></span>
         <a class="logo" href="http://120.77.205.32" target="_blank">雨云科技</a>
         <span id="top-nav">
             <a href="#">中国站</a>
             <a href="#">个人</a>
-            <a href="#">反馈</a>
+            <a href="#" id="reviews">反馈</a>
             <a href="#" class="active">信息</a>
             <a href="#">帮助</a>
-            <a href="#">退出</a>
+            <a href="#" id="reviews1">退出</a>
         </span>
     </header>
     <div style="padding:50px;margin:0 auto;width:760px;">

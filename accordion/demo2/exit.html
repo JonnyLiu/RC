@@ -5,18 +5,18 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="../../jquery-ui-1.12.1.custom/jquery-ui.js"></script>
     <link rel="stylesheet" href="../../jquery-ui-1.12.1.custom/jquery-ui.css">
-    <title>反馈信息</title>
+    <title>退出</title>
     <script type="text/javascript">
         $(document).ready(function(e) {
-            $("#reviews").bind('click', function(event) {
-                $("#checkandPass").dialog({
+            $("#reviews1").bind('click', function(event) {
+                $("#checkandPass1").dialog({
                     autoOpen: true,
                     width: 765,
                     show: "blind",
                     hide: "explode",
                     modal: true, //设置背景灰的 
                 });
-                $("#checkandPass").dialog("open");
+                $("#checkandPass1").dialog("open");
                 return true;
             });
         });
@@ -25,13 +25,10 @@
 
 <body>
     <div>
-        <input type="button" id="reviews" value="反馈" />
+        <input type="button" id="reviews1" value="反馈" />
     </div>
-    <div id="checkandPass" title="反馈信息" style="display: none;">
+    <div id="checkandPass1" title="是否确定退出" style="display: none;">
         <form id="passideas_true" method="post" enctype="multipart/form-data">
-            <div>
-                <textarea style="width:100%;height:90%;min-height: 100px;"></textarea>
-            </div>
             <div style="margin-top: 20px;text-align: center;">
                 <button style="height:30px;width:80px;" type="button" id="upfpass_true">确定</button>
                 <button style="height:30px;width:80px;" id="sb">取消</button>
