@@ -1,0 +1,15 @@
+.custom-colorize {
+    font-size: 20px;
+    position: relative;
+    width: 75px;
+    height: 75px;
+}
+
+.custom-colorize-changer {
+    font-size: 8px;
+    /* position: absolute; */
+    float: left;
+    right: 0;
+    bottom: 0;
+    background: white;
+}
