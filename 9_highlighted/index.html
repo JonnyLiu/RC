@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>雨云科技后台</title>
+    <link rel="icon" href="http://120.77.205.32/wp-content/uploads/2018/04/cropped-site-logo-2-32x32.png" sizes="32x32" />
+    <link href="css/style.css" media="screen" rel="stylesheet" />
+
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+
+            var spotlight = {
+                opacity: 0.2,
+                imgWidth: $('.spotlightWrapper ul li').find('img').width(),
+                imgHeight: $('.spotlightWrapper ul li').find('img').height()
+
+            };
+
+            $('.spotlightWrapper ul li').css({
+                'width': spotlight.imgWidth,
+                'height': spotlight.imgHeight
+            });
+
+            $('.spotlightWrapper ul li').hover(function() {
+                $(this).find('img').addClass('active').css({
+                    'opacity': 1
+                });
+                $(this).siblings('li').find('img').css({
+                    'opacity': spotlight.opacity
+                });
+            }, function() {
+                $(this).find('img').removeClass('active');
+            });
+
+            $('.spotlightWrapper ul').bind('mouseleave', function() {
+                $(this).find('img').css('opacity', 1);
+            });
+
+        });
+    </script>
+    <!-- <style>
+        .header {
+            font-size: 4rem;
+            /* width: 100%; */
+            content: "";
+            display: inline;
+            margin-left: 45%;
+            color: #000;
+        }
+    </style> -->
+</head>
+
+<body>
+
+    <!-- <div class="header">云应用</div> -->
+    <div class='spotlightWrapper'>
+        <ul>
+            <li>
+                <a href="#"><img src='images/1.ico' /></a>
+            </li>
+            <li>
+                <a href="#"><img src='images/2.ico' /></a>
+            </li>
+            <li>
+                <a href="#"><img src='images/3.ico' /></a>
+            </li>
+            <li>
+                <a href="#"><img src='images/4.ico' /></a>
+            </li>
+            <li>
+                <a href="#"><img src='images/5.ico' /></a>
+            </li>
+            <li>
+                <a href="#"><img src='images/6.ico' /></a>
+            </li>
+            <li>
+                <a href="#"><img src='images/7.ico' /></a>
+            </li>
+            <li>
+                <a href="#"><img src='images/9.ico' /></a>
+            </li>
+            <li>
+                <a href="#"><img src='images/10.ico' /></a>
+            </li>
+            <li>
+                <a href="#"><img src='images/11.ico' /></a>
+            </li>
+            <li>
+                <a href="#"><img src='images/12.ico' /></a>
+            </li>
+            <li>
+                <a href="#"><img src='images/13.ico' /></a>
+            </li>
+            <li>
+                <a href="#"><img src='images/14.ico' /></a>
+            </li>
+            <li>
+                <a href="#"><img src='images/15.ico' /></a>
+            </li>
+            <li>
+                <a href="#"><img src='images/16.ico' /></a>
+            </li>
+            <li>
+                <a href="#"><img src='images/8.ico' /></a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

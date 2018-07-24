@@ -109,14 +109,7 @@ $(function() {
         });
     });
 
-    // $("#car-type").change(function() {
 
-    //     $(":custom-colorize").colorize("option", {
-    //         red: 255,
-    //         green: 255,
-    //         blue: 255
-    //     });
-    // });
 
     // $("#car-type").focusin(function() {
     //     $(":custom-colorize").colorize("option", {
@@ -126,13 +119,49 @@ $(function() {
     //     });
     // });
 
-    $("#1").mousedown(function() {
-        $(":custom-colorize").colorize("option", {
-            red: 255,
-            green: 255,
-            blue: 255
-        });
-    });
+    // $("#1").mousedown(function() {
+    //     $(":custom-colorize").colorize("option", {
+    //         red: 255,
+    //         green: 255,
+    //         blue: 255
+    //     }); 
+    // });
 
+    // $(".custom-colorize-changer").on('click', function() {
+    //     var all_options = $("#car-type").options;
+    //     console.log(all_options);
+    // });
+
+    $("select").change(func);
+
+    function func() {
+
+        //获取被选中的option标签 
+
+        var vs = $('select  option:selected').val();
+        if (vs == 1) {
+            // black();
+            $("#car-type").change(function() {
+
+                $(":custom-colorize").colorize("option", {
+                    red: 255,
+                    green: 255,
+                    blue: 255
+                });
+            });
+            console.log(vs);
+        } else if (vs == 2) {
+            // blue();
+            // $("#car-type").change(function() {
+
+            //     $(":custom-colorize").colorize("option", {
+            //         red: 193,
+            //         green: 210,
+            //         blue: 240
+            //     });
+            // });
+            console.log(vs);
+        }
+    };
 
 });

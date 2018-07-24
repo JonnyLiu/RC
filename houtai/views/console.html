@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../assets/css/layui.css">
+    <link rel="stylesheet" href="../assets/css/view.css" />
+    <title></title>
+</head>
+
+<body class="layui-view-body">
+    <div class="layui-content">
+        <div class="layui-row layui-col-space20">
+            <div class="layui-col-sm6 layui-col-md3">
+                <div class="layui-card">
+                    <div class="layui-card-body chart-card">
+                        <div class="chart-header">
+                            <div class="metawrap">
+                                <div class="meta">
+                                    <span>云桌面数量</span>
+                                </div>
+                                <div class="total">125</div>
+                            </div>
+                        </div>
+                        <div class="chart-body">
+                            <div class="contentwrap">
+                                状态：可用
+                            </div>
+                        </div>
+                        <div class="chart-footer">
+                            <div class="field">
+                                <span>在线数</span>
+                                <span>84</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-sm6 layui-col-md3">
+                <div class="layui-card">
+                    <div class="layui-card-body chart-card">
+                        <div class="chart-header">
+                            <div class="metawrap">
+                                <div class="meta">
+                                    <span>云应用数量</span>
+                                </div>
+                                <div class="total">75</div>
+                            </div>
+                        </div>
+                        <div class="chart-body">
+                            <div class="contentwrap">
+                                状态：可用
+                            </div>
+                        </div>
+                        <div class="chart-footer">
+                            <div class="field">
+                                <span>使用数量</span>
+                                <span>75</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-sm6 layui-col-md3">
+                <div class="layui-card">
+                    <div class="layui-card-body chart-card">
+                        <div class="chart-header">
+                            <div class="metawrap">
+                                <div class="meta">
+                                    <span>总文件大小</span>
+                                </div>
+                                <div class="total">12.5TB</div>
+                            </div>
+                        </div>
+                        <div class="chart-body">
+                            <div class="contentwrap">
+                                状态：可用
+                            </div>
+                        </div>
+                        <div class="chart-footer">
+                            <div class="field">
+                                <span>使用量</span>
+                                <span>1.5TB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-sm6 layui-col-md3">
+                <div class="layui-card">
+                    <div class="layui-card-body chart-card">
+                        <div class="chart-header">
+                            <div class="metawrap">
+                                <div class="meta">
+                                    <span>管理员</span>
+                                </div>
+                                <div class="total">12人</div>
+                            </div>
+                        </div>
+                        <div class="chart-body">
+                            <div class="contentwrap">
+                                状态：在线
+                            </div>
+                        </div>
+                        <div class="chart-footer">
+                            <div class="field">
+                                <span>管理员总数</span>
+                                <span>23</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-sm12 layui-col-md12">
+                <div class="layui-card">
+                    <div class="layui-tab layui-tab-brief">
+                        <ul class="layui-tab-title">
+                            <li class="layui-this">新增云桌面</li>
+                            <li>新增云文件</li>
+                            <li>新增管理员</li>
+
+                        </ul>
+                        <div class="layui-tab-content">
+                            <div class="layui-tab-item layui-show">
+                                {{newdesk}}
+                            </div>
+                            <div class="layui-tab-item">
+                                {{newfile}}
+                            </div>
+                            <div class="layui-tab-item">
+                                {{newadmin}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/layui.all.js"></script>
+    <script>
+        var element = layui.element;
+    </script>
+</body>
+
+</html>
